@@ -1,0 +1,145 @@
+BÀI USESTATE_____________
+
+const orders = [10, 20, 30]
+
+function App() {
+  
+  /* const [counter, setCounter] = useState(() => {
+    const total = orders.reduce((total, cur) => total + cur)
+    return total
+  }) */
+
+  const [info, setInfo] = useState({
+    name: 'Nguyen Truong An',
+    age: 20,
+    address: 'Bien Hoa, Dong Nai'
+  })
+
+  const handleUpdate = () => {
+    setInfo({
+      ...info,
+      bio: 'Yeu cuoc doi'
+    })
+  }
+  const handleIncrease = () => {
+    // setCounter(counter + 1)
+    // setCounter(prevState => prevState + 10)
+  }
+
+  const handleDecrease = () => {
+    // setCounter(counter - 1)
+    // setCounter(prevState => prevState - 10)
+  }
+  return (
+    <div className="App" style={{padding : 20, fontSize : 50}}>
+        <h1>{JSON.stringify(info)}</h1>
+        <button onClick={handleUpdate} style={{width: 100}}>Update info</button>
+    </div>
+  );
+  }
+____________________________________________________________________________________
+BÀI TẬP TEST USESTATE
+const [gift, setGift] = useState()
+
+  const handleGift = () => {
+    const rand = Math.floor(Math.random() * gifts.length)
+    const gift = gifts[rand]
+    setGift(prev => gift)
+  }
+  return (
+    <div className="App" style={{padding : 20, fontSize : 50}}>
+        <h1>{gift || 'Chua co phan thuong'}</h1>
+        <button onClick={handleGift} style={{width: 200, height: 100, fontSize: 30}}>Take a gift</button>
+    </div>
+  );
+
+____________________________________________________________________________________
+
+TWO-WAY BINDING
+***********************
+radio-button
+const [checked, setChecked] = useState(3)
+
+  const handleSubmit = () =>{
+    console.log({id: checked});
+    alert('Bạn đã đăng ký học ' + courses[checked - 1].name)
+  }
+  
+  return (
+    <div className="App" style={{padding : 20, fontSize : 50}}>
+        {
+          courses.map(course => (
+            <div key={course.id}>
+              <input 
+                type="checkbox"
+                style={{width: 30, height: 30}}
+                checked = {checked === course.id}
+                onChange={() => setChecked(course.id)}
+              />
+              {course.name}
+            </div>
+          ))
+        }
+        <button onClick={handleSubmit} style={{width: 200, height: 50, fontSize: 30}}>Register</button>
+    </div>
+  );
+  ******************
+  checkbox
+  const gifts = [
+  'CPU Intel 9900K',
+  'NVIDIA GTX 3060Ti',
+  'RGB Keyboard',
+  'Logitech Mouse',
+  'Monitor 2K resolution'
+]
+
+const courses = [
+  {
+    id: 1,
+    name: 'HTML, CSS'
+  },
+  {
+    id: 2,
+    name: 'JavaScript'
+  },
+  {
+    id: 3,
+    name: 'ReactS'
+  }
+]
+  const [checked, setChecked] = useState([])
+
+  const handleSubmit = () =>{
+    console.log({id: checked});
+  }
+  
+  const handleCheck = (id) => {
+    setChecked(
+      prev => {
+        const isChecked = checked.includes(id)
+        if(isChecked){
+          return checked.filter(item => item !== id)
+        } else {
+          return [...prev, id]
+        }
+      }
+    )
+  }
+  return (
+    <div className="App" style={{padding : 20, fontSize : 50}}>
+        {
+          courses.map(course => (
+            <div key={course.id}>
+              <input 
+                type="checkbox"
+                style={{width: 30, height: 30}}
+                checked = {checked.includes(course.id)}
+                onChange={() => handleCheck(course.id)}
+              />
+              {course.name}
+            </div>
+          ))
+        }
+        <button onClick={handleSubmit} style={{width: 200, height: 50, fontSize: 30}}>Register</button>
+    </div>
+  );
