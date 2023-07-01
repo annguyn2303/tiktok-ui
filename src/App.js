@@ -1,11 +1,11 @@
-import { useState } from "react";
-import './App.css';
+import { useState } from "react"
+import '~/App.css'
 
 function App() {
-  
+
   return (
-    <div className="p-8">
-      
+    <div className="text-6xl">
+      Hello
     </div>
   );
 }
