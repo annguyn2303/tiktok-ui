@@ -2,10 +2,10 @@ import Header from "~/components/Layout/components/Header";
 
 function DefaultLayout({ children }) {
     return (
-        <div className="m-7">
+        <div className="">
             <Header />
-            <div className="container m-7">
-                <div className="content m-7">
+            <div className="container">
+                <div className="content">
                     {children}
                 </div>
             </div>
