@@ -1,6 +1,6 @@
 function Following() {
     return (
-        <h1>Following page</h1>
+        <h2>Following page</h2>
     );
 }
 

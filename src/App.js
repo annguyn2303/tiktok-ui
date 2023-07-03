@@ -11,7 +11,7 @@ function App() {
   return (
     // ctrl shift P để Wrap
     <Router>
-      <div className="text-6xl">
+      <div className="">
         <Routes>
           {publicRoutes.map((route, index) => {
             const Page = route.componet
