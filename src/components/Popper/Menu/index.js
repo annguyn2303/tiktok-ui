@@ -17,7 +17,6 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
     const renderItems = () => {
         return currentPos.data.map((item, index) => {
             const isParent = !!item.children;
-
             return (
                 <MenuItem
                     key={index}
@@ -52,7 +51,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}

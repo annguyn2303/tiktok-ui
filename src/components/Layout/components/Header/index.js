@@ -56,6 +56,86 @@ const MENU_ITEMS = [
                     code: 'ita',
                     title: 'Italy',
                 },
+                {
+                    type: 'language',
+                    code: 'thai',
+                    title: 'Thailand',
+                },
+                {
+                    type: 'language',
+                    code: 'indo',
+                    title: 'Indonesia',
+                },
+                {
+                    type: 'language',
+                    code: 'mal',
+                    title: 'Malaysia',
+                },
+                {
+                    type: 'language',
+                    code: 'sin',
+                    title: 'Singapore',
+                },
+                {
+                    type: 'language',
+                    code: 'laos',
+                    title: 'Laos',
+                },
+                {
+                    type: 'language',
+                    code: 'den',
+                    title: 'Denmark',
+                },
+                {
+                    type: 'language',
+                    code: 'bra',
+                    title: 'Brazil',
+                },
+                {
+                    type: 'language',
+                    code: 'jpn',
+                    title: 'Japanese',
+                },
+                {
+                    type: 'language',
+                    code: 'kor',
+                    title: 'Korean',
+                },
+                {
+                    type: 'language',
+                    code: 'pol',
+                    title: 'Poland',
+                },
+                {
+                    type: 'language',
+                    code: 'swi',
+                    title: 'SwitzerLand',
+                },
+                {
+                    type: 'language',
+                    code: 'swe',
+                    title: 'Swedden',
+                },
+                {
+                    type: 'language',
+                    code: 'ner',
+                    title: 'NetherLand',
+                },
+                {
+                    type: 'language',
+                    code: 'cna',
+                    title: 'Chinese',
+                },
+                {
+                    type: 'language',
+                    code: 'rus',
+                    title: 'Russia',
+                },
+                {
+                    type: 'language',
+                    code: 'aus',
+                    title: 'Autralia',
+                },
             ],
         },
     },
