@@ -11,7 +11,7 @@ function App() {
             <div className="">
                 <Routes>
                     {publicRoutes.map((route, index) => {
-                        const Page = route.componet;
+                        const Page = route.component;
 
                         let Layout = DefaultLayout;
 
